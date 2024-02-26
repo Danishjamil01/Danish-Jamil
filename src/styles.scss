@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'aos/dist/aos.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --img-xl: clamp(250px, 290px, 310px);
+  --img-lg: clamp(150px, 185px, 200px);
+  --img-md: clamp(90px, 100px, 110px);
+  --img-sm: clamp(60px, 70px, 80px);
+  --img-xs: clamp(28px, 32px, 36px);
+
+  --font-xl: clamp(40px, 6vw, 80px);
+  --font-lg: clamp(30px, 4vw, 40px);
+  --font-md: clamp(18px, 3vw, 20px);
+  --font-sm: clamp(14px, 2vw, 16px);
+  --font-xs: clamp(11px, 1vw, 12px);
+
+  --primary-color: #f9532d;
+  --primary-dark: #1F252E;
+  --primary-medium: #891d04;
+}
+
+
+
+.font-xl {
+  font-size: var(--font-xl) !important;
+}
+
+.font-lg {
+  font-size: var(--font-lg) !important;
+}
+
+.font-md {
+  font-size: var(--font-md) !important;
+}
+
+.font-sm {
+  font-size: var(--font-sm) !important;
+}
+
+.font-xs {
+  font-size: var(--font-xs) !important;
+}
+
+.oneLineText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  // / number of lines to show /
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  transition: 0.6s !important;
+  background-color: transparent !important;
+  padding-top: 8px;
+  font-size: var(--font-sm);
+}

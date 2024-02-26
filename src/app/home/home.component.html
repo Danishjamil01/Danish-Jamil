@@ -1,0 +1,273 @@
+<nav [class.scrolled-nav]="scrolled">
+  <header class="">
+    <div class="page-header">
+      <div class="logo">
+        <a href="#">Danish</a>
+      </div>
+      <div class="nav-item">
+        <ul class="nav-link">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- <div class="toggle" data-bs-target="#offcanvasExample" data-bs-toggle="offcanvas">
+        <i style="font-size: 25px;color: #fff;" class="bi bi-list"></i>
+      </div> -->
+      <button class="toggle" style=" padding: 8px 20px;
+      border: 1px solid;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;">Hire Me</button>
+    </div>
+  </header>
+</nav>
+<!-- -------------------------sidebar------------------------- -->
+
+<!-- -------------------------sidebar------------------------- -->
+
+<section id="home" class="heading-content" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/images/modern-2.jpg);background-position: center center;
+background-size: cover; padding:120px 100px;background-attachment: fixed;">
+  <div class="banner" style="display: flex;">
+    <div class="left-content main" style="width: 50%;padding:100px 8px;">
+      <div class="detail">
+        <h3>Hi, I'm</h3>
+        <h1><span style="color:#f9532d;">Md Danish &nbsp;</span>Jamil</h1>
+        <p>I'm a professional Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by web
+          development solutions</p>
+        <button class="section-btn"><a href="#about">About Us <i class="bi bi-arrow-left"></i></a></button>
+      </div>
+
+      <div class="social-icons">
+        <li *ngFor="let icon of icons"><i class="{{icon.name}}" [style.color]="icon.color"></i></li>
+      </div>
+    </div>
+
+    <div class="right-content" style="width: 50%;display: flex;justify-content: center;padding-top: 100px;">
+      <div class="hexagon">
+        <img src="assets/images/profile.png" alt="Your Image" style="width: 100%;border-radius: 50%;">
+      </div>
+    </div>
+  </div>
+  <div class="banner-btn">
+    <button class="talk-btn">🖐 Let's Talk</button>
+    <button>My Company</button>
+  </div>
+</section>
+
+<section id="about" class="about" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/images/modern-3.jpg);background-position: center center;
+background-size: cover;background-attachment: fixed;">
+  <div class="about-content">
+    <div class="row">
+      <div class="col-sm-3 mt-3 col-12">
+        <div class="personal-info">
+          <div class="info-img-container">
+            <div class="img-container">
+              <img src="assets/images/profile.png" alt="">
+            </div>
+          </div>
+          <h4 class="name">Md Danish Jamil</h4>
+          <div class="skill-btn">
+            <button>Ui/Ux Designer</button>
+          </div>
+          <div class="about-social-icons">
+            <li *ngFor="let icon of icons"><i class="{{icon.name}}" [style.color]="icon.color"></i></li>
+          </div>
+          <div class="personal-contact-info">
+            <div *ngFor="let info of contact" class="main-div">
+              <div class="info-item">
+                <i class="{{info.icon}}"></i>
+              </div>
+              <div class="item">
+                <span>{{info.phone}}</span>
+                <p>{{info.number}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="download_cv mt-4">
+            <button><i class="bi bi-download"></i> Download Cv</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9 mt-3 col-12">
+        <div class="content-page">
+          <span class="page-title">About</span>
+          <br><br>
+          <p>I'm a frontend developer from Hyderabad, India, skilled in creating visually appealing and functional
+            websites that provide exceptional user experiences.
+          </p>
+          <p>
+            My aim is to bring across your message and identity in the most creative way. I created web design for many
+            famous brand companies.
+          </p>
+          <div class="section-wrapper">
+            <h2>What I Do!</h2>
+            <br>
+            <div class="row">
+              <div *ngFor="let work of experiance" class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="work-container">
+                  <div>
+                    <img class="workImg" src="{{work.img}}" alt="">
+                  </div>
+                  <div class="text">
+                    <h2 class="title">
+                      {{work.name}}
+                    </h2>
+                    <p class="">{{work.description}}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button class="section-btn"><a href="#skills">Skills <i class="bi bi-arrow-left"></i></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills"
+  style=" background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/images/modern-4.jpg);background-position: center center;background-size: cover; background-attachment: fixed;padding: 90px;">
+  <h4 style="text-align: center;color: #fff;font-size: var(--font-lg);" class="page-title">Skills</h4>
+  <br><br>
+  <div class="content-section">
+    <p class="about-skills">I possess advanced proficiency in Java, HTML, CSS, JavaScript, and TypeScript, enabling me
+      to develop dynamic web
+      applications. With expertise in Angular and GSAP for animations, I create engaging user experiences. My strong
+      analytical and collaborative skills ensure efficient problem-solving and effective teamwork.
+    </p>
+    <br>
+    <div class="row">
+      <div class="col-sm-7">
+        <div *ngFor="let example of skills" class="mt-4">
+          <label style="color: #fff;    font-size: 15px;
+          font-weight: 500;
+          padding-bottom: 6px ">{{example.name}}</label>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="example.progress">
+              <span class="progress-text">{{example.precentage}}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-5">
+        <div class="tools-section" style="text-align: center;">
+          <button style=" text-align: center;   border: none;
+          padding: 6px 23px;
+          font-size: 14px;
+          border-radius: 4px;font-weight: 500;">TOOLS COVERED</button>
+          <div class="hex" style=" display: flex;flex-wrap: wrap;justify-content: center; gap: 40px;">
+
+            <div *ngFor="let item of items" class="hover" style="position: relative;">
+              <div>
+                <i style="font-size: 80px;-webkit-text-stroke: 0.5px;position: relative;font-weight: 100;"
+                  class="{{item.icon}}">
+                  <div class="hex1">
+                    <img class="skill-img" src="{{item.img}}" alt="">
+                  </div>
+                </i>
+              </div>
+
+              <span class="pvalue" style="position: absolute;
+              background: #fff;
+              padding: 2px 25px;
+              top: 0;border-radius: 4px;
+              transform: translateX(100%);opacity: 0;">{{item.pvalue}}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="projects" id="projects">
+  <div class="">
+    <div style="padding: 10px 15px;text-align: center;">
+      <h3 style="font-size: var(--font-lg);">Projects I've Done</h3>
+      <p>I build web applications that bring positive results to businesses. Check out a few of my projects.</p>
+    </div>
+
+    <div class="row" style="padding: 10px 25px;">
+      <div class="col-sm-6 col-12 mt-3" *ngFor="let item of projects">
+        <div class="project-item"
+          style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url({{item.img}}); background-position: center center;background-size: cover;justify-content: center; display: flex;align-items: center; height: 30vh;">
+          <div class="project-details text-center">
+            <p class="project-name">{{item.name}}</p>
+            <button style=" padding: 8px 20px;
+            border: 1px solid;
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;" class="project-button">{{item.view}}</button>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%;display: flex;justify-content: center;margin-top: 15px;">
+        <button class="more" style="background-color: transparent;
+        border: 2px solid var(--primary-color);
+        padding: 6px 40px;
+        font-size: var(--font-sm);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: .5s;color: #fff;width: 50%;">
+          View more
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contact" id="contact"
+  style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/images/modern-6.jpg);background-position: center center;background-size: cover;">
+  <h4 style="font-size: var(--font-lg);text-align: center;color: #fff;">Get in touch</h4>
+  <p style="text-align: center;">Turn Your Idea Into A Digital Product People Love To Use! Use this form, reach out and
+    let's talk about your
+    project.</p>
+
+
+  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+    <div class="row" style="background-color: #1c201b;padding: 50px 25px;
+    border-radius: 10px;">
+      <div class="col-12 col-sm-6">
+        <!-- <label for="name">Name:</label> -->
+        <input type="text" placeholder="Your Name" spellcheck="true" ngModel required>
+      </div>
+      <div class="col-12 col-sm-6 mt-4">
+        <!-- <label for="email">Email:</label> -->
+        <input type="email" placeholder="Your Email" spellcheck="true" ngModel required>
+      </div>
+      <div class="col-12 col-sm-6 mt-4">
+        <!-- <label for="phone">Phone:</label> -->
+        <input type="tel" placeholder="Your Phone" spellcheck="true" ngModel>
+      </div>
+      <div class="col-12 col-sm-6 mt-4">
+        <!-- <label for="subject">Subject:</label> -->
+        <input type="text" placeholder="Your Subject" spellcheck="true" ngModel required>
+      </div>
+      <div class="mt-4">
+        <label for="message" style="color: #fff;">Message:</label>
+        <textarea name="" spellcheck="true" style="width: 100%;background-color: #272c29;outline: none;" rows="8"
+          required></textarea>
+      </div>
+      <div style="display: flex;justify-content: center;margin-top: 10px;">
+        <button type="submit" style="
+        border: none;
+        padding: 12px 50px;
+        border-radius: 4px;
+        background-color: var(--primary-color);
+        color: #fff;
+        font-weight: 500;">Submit</button>
+      </div>
+    </div>
+
+  </form>
+
+</section>
